@@ -1,0 +1,550 @@
+﻿@model Pokedex3.Models.Pokemon
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if ((Model.RegionNavigation.Nombre) == "Kanto")
+{
+    <center>
+        <div class="container">
+            <div class="Container" style="width:700px;">
+                <div class="Card">
+                    <div class="modal-content text-left">
+                        <div class="modal-header" style="background:#99ccff;">
+                            <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles del Pokemon - @Html.DisplayFor(model => model.Nombre)</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <p>
+                                    <strong>Ataques: </strong>
+                                    <ul>
+                                        <li>@Html.DisplayFor(model => model.Ataque1)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque2)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque3)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque4)</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Region: </strong>@Html.DisplayFor(model => model.RegionNavigation.Nombre)</p>
+                                <p><strong>Tipo: </strong> @Html.DisplayFor(model => model.TipoNavigation.Tipo1)</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-transparent">
+                            <div class="text-center">
+                                <a class="btn" style="background:#99ccff;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                                <a class="btn btn-outline-dark" asp-action="Index">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </center>
+}
+else if (Model.RegionNavigation.Nombre == "Johto")
+{
+    <center>
+        <div class="container">
+            <div class="Container" style="width:700px;">
+                <div class="Card">
+                    <div class="modal-content text-left">
+                        <div class="modal-header" style="background:#99ffff;">
+                            <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles del Pokemon - @Html.DisplayFor(model => model.Nombre)</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <p>
+                                    <strong>Ataques: </strong>
+                                    <ul>
+                                        <li>@Html.DisplayFor(model => model.Ataque1)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque2)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque3)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque4)</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Region: </strong>@Html.DisplayFor(model => model.RegionNavigation.Nombre)</p>
+                                <p><strong>Tipo: </strong> @Html.DisplayFor(model => model.TipoNavigation.Tipo1)</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-transparent">
+                            <div class="text-center">
+                                <a class="btn" style="background:#99ffff;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                                <a class="btn btn-outline-dark" asp-action="Index">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </center>
+}
+else if (Model.RegionNavigation.Nombre == "Hoenn")
+{
+    <center>
+        <div class="container">
+            <div class="Container" style="width:700px;">
+                <div class="Card">
+                    <div class="modal-content text-left">
+                        <div class="modal-header" style="background:#a3c2c2;">
+                            <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles del Pokemon - @Html.DisplayFor(model => model.Nombre)</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <p>
+                                    <strong>Ataques: </strong>
+                                    <ul>
+                                        <li>@Html.DisplayFor(model => model.Ataque1)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque2)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque3)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque4)</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Region: </strong>@Html.DisplayFor(model => model.RegionNavigation.Nombre)</p>
+                                <p><strong>Tipo: </strong> @Html.DisplayFor(model => model.TipoNavigation.Tipo1)</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-transparent">
+                            <div class="text-center">
+                                <a class="btn" style="background:#a3c2c2;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                                <a class="btn btn-outline-dark" asp-action="Index">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </center>
+}
+else if (Model.RegionNavigation.Nombre == "Sinnoh")
+{
+    <center>
+        <div class="container">
+            <div class="Container" style="width:700px;">
+                <div class="Card">
+                    <div class="modal-content text-left">
+                        <div class="modal-header" style="background:#8585e0;">
+                            <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles del Pokemon - @Html.DisplayFor(model => model.Nombre)</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <p>
+                                    <strong>Ataques: </strong>
+                                    <ul>
+                                        <li>@Html.DisplayFor(model => model.Ataque1)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque2)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque3)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque4)</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Region: </strong>@Html.DisplayFor(model => model.RegionNavigation.Nombre)</p>
+                                <p><strong>Tipo: </strong> @Html.DisplayFor(model => model.TipoNavigation.Tipo1)</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-transparent">
+                            <div class="text-center">
+                                <a class="btn" style="background:#8585e0;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                                <a class="btn btn-outline-dark" asp-action="Index">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </center>
+}
+else if (Model.RegionNavigation.Nombre == "Teselia")
+{
+    <center>
+        <div class="container">
+            <div class="Container" style="width:700px;">
+                <div class="Card">
+                    <div class="modal-content text-left">
+                        <div class="modal-header" style="background:#8cd9b3;">
+                            <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles del Pokemon - @Html.DisplayFor(model => model.Nombre)</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <p>
+                                    <strong>Ataques: </strong>
+                                    <ul>
+                                        <li>@Html.DisplayFor(model => model.Ataque1)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque2)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque3)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque4)</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Region: </strong>@Html.DisplayFor(model => model.RegionNavigation.Nombre)</p>
+                                <p><strong>Tipo: </strong> @Html.DisplayFor(model => model.TipoNavigation.Tipo1)</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-transparent">
+                            <div class="text-center">
+                                <a class="btn" style="background:#8cd9b3;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                                <a class="btn btn-outline-dark" asp-action="Index">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </center>
+}
+else if (Model.RegionNavigation.Nombre == "Kalos")
+{
+    <center>
+        <div class="container">
+            <div class="Container" style="width:700px;">
+                <div class="Card">
+                    <div class="modal-content text-left">
+                        <div class="modal-header" style="background:#99ffcc;">
+                            <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles del Pokemon - @Html.DisplayFor(model => model.Nombre)</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <p>
+                                    <strong>Ataques: </strong>
+                                    <ul>
+                                        <li>@Html.DisplayFor(model => model.Ataque1)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque2)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque3)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque4)</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Region: </strong>@Html.DisplayFor(model => model.RegionNavigation.Nombre)</p>
+                                <p><strong>Tipo: </strong> @Html.DisplayFor(model => model.TipoNavigation.Tipo1)</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-transparent">
+                            <div class="text-center">
+                                <a class="btn" style="background:#99ffcc;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                                <a class="btn btn-outline-dark" asp-action="Index">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </center>
+}
+else if (Model.RegionNavigation.Nombre == "Alola")
+{
+    <center>
+        <div class="container">
+            <div class="Container" style="width:700px;">
+                <div class="Card">
+                    <div class="modal-content text-left">
+                        <div class="modal-header" style="background:#bf80ff;">
+                            <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles del Pokemon - @Html.DisplayFor(model => model.Nombre)</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <p>
+                                    <strong>Ataques: </strong>
+                                    <ul>
+                                        <li>@Html.DisplayFor(model => model.Ataque1)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque2)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque3)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque4)</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Region: </strong>@Html.DisplayFor(model => model.RegionNavigation.Nombre)</p>
+                                <p><strong>Tipo: </strong> @Html.DisplayFor(model => model.TipoNavigation.Tipo1)</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-transparent">
+                            <div class="text-center">
+                                <a class="btn" style="background:#bf80ff;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                                <a class="btn btn-outline-dark" asp-action="Index">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </center>
+}
+else if (Model.RegionNavigation.Nombre == "Aura")
+{
+    <center>
+        <div class="container">
+            <div class="Container" style="width:700px;">
+                <div class="Card">
+                    <div class="modal-content text-left">
+                        <div class="modal-header" style="background:#99ff99;">
+                            <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles del Pokemon - @Html.DisplayFor(model => model.Nombre)</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <p>
+                                    <strong>Ataques: </strong>
+                                    <ul>
+                                        <li>@Html.DisplayFor(model => model.Ataque1)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque2)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque3)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque4)</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Region: </strong>@Html.DisplayFor(model => model.RegionNavigation.Nombre)</p>
+                                <p><strong>Tipo: </strong> @Html.DisplayFor(model => model.TipoNavigation.Tipo1)</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-transparent">
+                            <div class="text-center">
+                                <a class="btn" style="background:#99ff99;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                                <a class="btn btn-outline-dark" asp-action="Index">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </center>
+}
+else if (Model.RegionNavigation.Nombre == "Floresta")
+{
+    <center>
+        <div class="container">
+            <div class="Container" style="width:700px;">
+                <div class="Card">
+                    <div class="modal-content text-left">
+                        <div class="modal-header" style="background:#ff99ff;">
+                            <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles del Pokemon - @Html.DisplayFor(model => model.Nombre)</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <p>
+                                    <strong>Ataques: </strong>
+                                    <ul>
+                                        <li>@Html.DisplayFor(model => model.Ataque1)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque2)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque3)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque4)</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Region: </strong>@Html.DisplayFor(model => model.RegionNavigation.Nombre)</p>
+                                <p><strong>Tipo: </strong> @Html.DisplayFor(model => model.TipoNavigation.Tipo1)</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-transparent">
+                            <div class="text-center">
+                                <a class="btn" style="background:#ff99ff;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                                <a class="btn btn-outline-dark" asp-action="Index">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </center>
+}
+else if (Model.RegionNavigation.Nombre == "Almia")
+{
+    <center>
+        <div class="container">
+            <div class="Container" style="width:700px;">
+                <div class="Card">
+                    <div class="modal-content text-left">
+                        <div class="modal-header" style="background:#ffffb3;">
+                            <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles del Pokemon - @Html.DisplayFor(model => model.Nombre)</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <p>
+                                    <strong>Ataques: </strong>
+                                    <ul>
+                                        <li>@Html.DisplayFor(model => model.Ataque1)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque2)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque3)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque4)</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Region: </strong>@Html.DisplayFor(model => model.RegionNavigation.Nombre)</p>
+                                <p><strong>Tipo: </strong> @Html.DisplayFor(model => model.TipoNavigation.Tipo1)</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-transparent">
+                            <div class="text-center">
+                                <a class="btn" style="background:#ffffb3;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                                <a class="btn btn-outline-dark" asp-action="Index">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </center>
+}
+else if (Model.RegionNavigation.Nombre == "Oblivia")
+{
+    <center>
+        <div class="container">
+            <div class="Container" style="width:700px;">
+                <div class="Card">
+                    <div class="modal-content text-left">
+                        <div class="modal-header" style="background:#ff80ff;">
+                            <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles del Pokemon - @Html.DisplayFor(model => model.Nombre)</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <p>
+                                    <strong>Ataques: </strong>
+                                    <ul>
+                                        <li>@Html.DisplayFor(model => model.Ataque1)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque2)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque3)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque4)</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Region: </strong>@Html.DisplayFor(model => model.RegionNavigation.Nombre)</p>
+                                <p><strong>Tipo: </strong> @Html.DisplayFor(model => model.TipoNavigation.Tipo1)</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-transparent">
+                            <div class="text-center">
+                                <a class="btn" style="background:#ff80ff;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                                <a class="btn btn-outline-dark" asp-action="Index">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </center>
+}
+else if (Model.RegionNavigation.Nombre == "Sol")
+{
+    <center>
+        <div class="container">
+            <div class="Container" style="width:700px;">
+                <div class="Card">
+                    <div class="modal-content text-left">
+                        <div class="modal-header" style="background:#e6ff99;">
+                            <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles del Pokemon - @Html.DisplayFor(model => model.Nombre)</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <p>
+                                    <strong>Ataques: </strong>
+                                    <ul>
+                                        <li>@Html.DisplayFor(model => model.Ataque1)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque2)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque3)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque4)</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Region: </strong>@Html.DisplayFor(model => model.RegionNavigation.Nombre)</p>
+                                <p><strong>Tipo: </strong> @Html.DisplayFor(model => model.TipoNavigation.Tipo1)</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-transparent">
+                            <div class="text-center">
+                                <a class="btn" style="background:#e6ff99;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                                <a class="btn btn-outline-dark" asp-action="Index">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </center>
+}
+else if (Model.RegionNavigation.Nombre == "Ransei")
+{
+    <center>
+        <div class="container">
+            <div class="Container" style="width:700px;">
+                <div class="Card">
+                    <div class="modal-content text-left">
+                        <div class="modal-header" style="background:#ff9980;">
+                            <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles del Pokemon - @Html.DisplayFor(model => model.Nombre)</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <p>
+                                    <strong>Ataques: </strong>
+                                    <ul>
+                                        <li>@Html.DisplayFor(model => model.Ataque1)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque2)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque3)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque4)</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Region: </strong>@Html.DisplayFor(model => model.RegionNavigation.Nombre)</p>
+                                <p><strong>Tipo: </strong> @Html.DisplayFor(model => model.TipoNavigation.Tipo1)</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-transparent">
+                            <div class="text-center">
+                                <a class="btn" style="background:#ff9980;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                                <a class="btn btn-outline-dark" asp-action="Index">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </center>
+}
+else if (Model.RegionNavigation.Nombre == "Ferrum")
+{
+    <center>
+        <div class="container">
+            <div class="Container" style="width:700px;">
+                <div class="Card">
+                    <div class="modal-content text-left">
+                        <div class="modal-header" style="background:#d98c8c;">
+                            <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles del Pokemon - @Html.DisplayFor(model => model.Nombre)</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <p>
+                                    <strong>Ataques: </strong>
+                                    <ul>
+                                        <li>@Html.DisplayFor(model => model.Ataque1)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque2)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque3)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque4)</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Region: </strong>@Html.DisplayFor(model => model.RegionNavigation.Nombre)</p>
+                                <p><strong>Tipo: </strong> @Html.DisplayFor(model => model.TipoNavigation.Tipo1)</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-transparent">
+                            <div class="text-center">
+                                <a class="btn" style="background:#d98c8c;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                                <a class="btn btn-outline-dark" asp-action="Index">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </center>
+}
+else
+{
+    <center>
+        <div class="container">
+            <div class="Container" style="width:700px;">
+                <div class="Card">
+                    <div class="modal-content text-left">
+                        <div class="modal-header" style="background:#ffbf00;">
+                            <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles del Pokemon - @Html.DisplayFor(model => model.Nombre)</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <p>
+                                    <strong>Ataques: </strong>
+                                    <ul>
+                                        <li>@Html.DisplayFor(model => model.Ataque1)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque2)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque3)</li>
+                                        <li>@Html.DisplayFor(model => model.Ataque4)</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Region: </strong>@Html.DisplayFor(model => model.RegionNavigation.Nombre)</p>
+                                <p><strong>Tipo: </strong> @Html.DisplayFor(model => model.TipoNavigation.Tipo1)</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-transparent">
+                            <div class="text-center">
+                                <a class="btn" style="background:#ffbf00;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                                <a class="btn btn-outline-dark" asp-action="Index">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </center>
+}
+
+
+

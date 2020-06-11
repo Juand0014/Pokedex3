@@ -1,0 +1,274 @@
+﻿@model IEnumerable<Pokedex3.Models.Region>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Sala de Regiones</h1>
+
+<p>
+    <a class="btn btn-outline-success" asp-action="Create">Crear Region</a>
+</p>
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        if ((item.Nombre) == "Kanto")
+        {
+            <br />
+            <div class="card" style="width: 17rem;">
+                <div class="card-header modal-title text-white" style="background:#99ccff;">
+                    Region
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Id) - @Html.DisplayFor(modelItem => item.Nombre)</li>
+                </ul>
+                <div class="btn-group text-center" role="group" aria-label="Basic example">
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </div><br />
+        }
+        else if ((item.Nombre) == "Johto")
+        {
+            <br />
+            <div class="card" style="width: 17rem;">
+                <div class="card-header" style="background:#99ffff;">
+                    Region
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Id) - @Html.DisplayFor(modelItem => item.Nombre)</li>
+                </ul>
+                <div class="btn-group text-center" role="group" aria-label="Basic example">
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </div><br />
+        }
+        else if ((item.Nombre) == "Hoenn")
+        {
+            <br />
+            <div class="card" style="width: 17rem;">
+                <div class="card-header" style="background:#a3c2c2;">
+                    Region
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Id) - @Html.DisplayFor(modelItem => item.Nombre)</li>
+                </ul>
+                <div class="btn-group text-center" role="group" aria-label="Basic example">
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </div><br />
+        }
+        else if ((item.Nombre) == "Sinnoh")
+        {
+            <br />
+            <div class="card" style="width: 17rem;">
+                <div class="card-header" style="background:#8585e0;">
+                    Region
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Id) - @Html.DisplayFor(modelItem => item.Nombre)</li>
+                </ul>
+                <div class="btn-group text-center" role="group" aria-label="Basic example">
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </div><br />
+        }
+        else if ((item.Nombre) == "Teselia")
+        {
+            <br />
+            <div class="card" style="width: 17rem;">
+                <div class="card-header" style="background:#8cd9b3;">
+                    Region
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Id) - @Html.DisplayFor(modelItem => item.Nombre)</li>
+                </ul>
+                <div class="btn-group text-center" role="group" aria-label="Basic example">
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </div><br />
+        }
+        else if ((item.Nombre) == "Kalos")
+        {
+            <br />
+            <div class="card" style="width: 17rem;">
+                <div class="card-header" style="background:#99ffcc;">
+                    Region
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Id) - @Html.DisplayFor(modelItem => item.Nombre)</li>
+                </ul>
+                <div class="btn-group text-center" role="group" aria-label="Basic example">
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </div><br />
+        }
+        else if ((item.Nombre) == "Alola")
+        {
+            <br />
+            <div class="card" style="width: 17rem;">
+                <div class="card-header" style="background:#bf80ff;">
+                    Region
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Id) - @Html.DisplayFor(modelItem => item.Nombre)</li>
+                </ul>
+                <div class="btn-group text-center" role="group" aria-label="Basic example">
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </div><br />
+        }
+        else if ((item.Nombre) == "Aura")
+        {
+            <br />
+            <div class="card" style="width: 17rem;">
+                <div class="card-header" style="background:#99ff99;">
+                    Region
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Id) - @Html.DisplayFor(modelItem => item.Nombre)</li>
+                </ul>
+                <div class="btn-group text-center" role="group" aria-label="Basic example">
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </div><br />
+        }
+        else if ((item.Nombre) == "Floresta")
+        {
+            <br />
+            <div class="card" style="width: 17rem;">
+                <div class="card-header" style="background:#ff99ff;">
+                    Region
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Id) - @Html.DisplayFor(modelItem => item.Nombre)</li>
+                </ul>
+                <div class="btn-group text-center" role="group" aria-label="Basic example">
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </div><br />
+        }
+        else if ((item.Nombre) == "Almia")
+        {
+            <br />
+            <div class="card" style="width: 17rem;">
+                <div class="card-header" style="background:#ffffb3;">
+                    Region
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Id) - @Html.DisplayFor(modelItem => item.Nombre)</li>
+                </ul>
+                <div class="btn-group text-center" role="group" aria-label="Basic example">
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </div><br />
+        }
+        else if ((item.Nombre) == "Oblivia")
+        {
+            <br />
+            <div class="card" style="width: 17rem;">
+                <div class="card-header" style="background:#ff80ff;">
+                    Region
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Id) - @Html.DisplayFor(modelItem => item.Nombre)</li>
+                </ul>
+                <div class="btn-group text-center" role="group" aria-label="Basic example">
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </div><br />
+        }
+        else if ((item.Nombre) == "Sol")
+        {
+            <br />
+            <div class="card" style="width: 17rem;">
+                <div class="card-header" style="background:#e6ff99;">
+                    Region
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Id) - @Html.DisplayFor(modelItem => item.Nombre)</li>
+                </ul>
+                <div class="btn-group text-center" role="group" aria-label="Basic example">
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </div><br />
+        }
+        else if ((item.Nombre) == "Ransei")
+        {
+            <br />
+            <div class="card" style="width: 17rem;">
+                <div class="card-header" style="background:#ff9980;">
+                    Region
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Id) - @Html.DisplayFor(modelItem => item.Nombre)</li>
+                </ul>
+                <div class="btn-group text-center" role="group" aria-label="Basic example">
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </div><br />
+        }
+        else if ((item.Nombre) == "Ferrum")
+        {
+            <br />
+            <div class="card" style="width: 17rem;">
+                <div class="card-header" style="background:#d98c8c;">
+                    Region
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Id) - @Html.DisplayFor(modelItem => item.Nombre)</li>
+                </ul>
+                <div class="btn-group text-center" role="group" aria-label="Basic example">
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </div><br />
+        }
+        else
+        {
+            <br />
+            <div class="card" style="width: 17rem;">
+                <div class="card-header" style="background:#ffbf00;">
+                    Region
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Id) - @Html.DisplayFor(modelItem => item.Nombre)</li>
+                </ul>
+                <div class="btn-group text-center" role="group" aria-label="Basic example">
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </div><br />
+        }
+    }
+</div>

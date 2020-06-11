@@ -1,0 +1,35 @@
+﻿@model Pokedex3.Models.Tipo
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="text-truncate">Eliminar</h3>
+<hr />
+<center>
+    <div class="Container" style="width:700px;">
+        <div class="Card">
+            <div class="modal-content text-left">
+                <div class="modal-header bg-danger">
+                    <h5 class="modal-title text-center text-white" id="exampleModalLabel">Seguro que deseas eliminar este Tipo?</h5>
+                </div>
+                <div class="modal-body">
+                    <dt class="col-sm-2">
+                        Tipo
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Tipo1)
+                    </dd>
+                </div>
+                <div class="modal-footer bg-transparent">
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="submit" value="Delete" class="btn btn-danger" /> |
+                        <a asp-action="Index" class="btn btn-outline-dark">Volver</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</center>

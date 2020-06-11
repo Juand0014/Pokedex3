@@ -1,0 +1,37 @@
+﻿@model Pokedex3.Models.Pokemon
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    
+    <center>
+        <div class="Container" style="width:700px;">
+            <div class="Card">
+                <div class="modal-content text-left">
+                    <div class="modal-header bg-danger">
+                        <h5 class="modal-title text-center text-white" id="exampleModalLabel">Seguro que deseas eliminar este Pokemon? - @Html.DisplayFor(model => model.Nombre)</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p> <strong>Nombre: </strong>@Html.DisplayFor(model => model.Nombre)</p>
+                        <label><Strong>Ataques:</Strong></label>
+                        <ul class="list-group list-group-horizontal-lg">
+                            <li class="list-group-item">@Html.DisplayFor(model => model.Ataque1)</li>
+                            <li class="list-group-item">@Html.DisplayFor(model => model.Ataque2)</li>
+                            <li class="list-group-item">@Html.DisplayFor(model => model.Ataque3)</li>
+                            <li class="list-group-item">@Html.DisplayFor(model => model.Ataque4)</li>
+                        </ul>
+                        <p><Strong>Region: </Strong>@Html.DisplayFor(model => model.RegionNavigation.Nombre)</p>
+                        <p><Strong>Tipo: </Strong>@Html.DisplayFor(model => model.TipoNavigation.Tipo1)</p>
+                    </div>
+                    <div class="modal-footer bg-transparent">
+                        <form asp-action="Delete" class="text-center">
+                            <input type="hidden" asp-for="Id" />
+                            <input type="submit" value="Delete" class="btn btn-danger" /> |
+                            <a asp-action="Index" class="btn btn-outline-dark">Volver</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>

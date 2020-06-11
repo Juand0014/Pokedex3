@@ -1,0 +1,99 @@
+﻿@model Pokedex3.Models.Pokemon
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Agregar Pokemon</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create" class="needs-validation" novalidate>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" required />
+                <div class="valid-feedback">
+                    Bien hecho muchachon!
+                </div>
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="Ataque1" class="control-label"></label>
+                    <input asp-for="Ataque1" class="form-control" required />
+                    <div class="valid-feedback">
+                        Bien hecho muchachon!
+                    </div>
+                    <span asp-validation-for="Ataque1" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Ataque2" class="control-label"></label>
+                    <input asp-for="Ataque2" class="form-control" required />
+                    <div class="valid-feedback">
+                        Bien hecho muchachon!
+                    </div>
+                    <span asp-validation-for="Ataque2" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Ataque3" class="control-label"></label>
+                    <input asp-for="Ataque3" class="form-control" required />
+                    <div class="valid-feedback">
+                        Bien hecho muchachon!
+                    </div>
+                    <span asp-validation-for="Ataque3" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Ataque4" class="control-label"></label>
+                    <input asp-for="Ataque4" class="form-control" required />
+                    <div class="valid-feedback">
+                        Bien hecho muchachon!
+                    </div>
+                    <span asp-validation-for="Ataque4" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Region" class="control-label">Region</label>
+                <select asp-for="Region" class="form-control" asp-items="ViewBag.Region">
+                </select>
+                <div class="valid-feedback">
+                    Bien hecho muchachon!
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tipo" class="control-label">Tipo</label>
+                <select asp-for="Tipo" class="form-control" asp-items="ViewBag.Tipo"></select>
+                <div class="valid-feedback">
+                    Bien hecho muchachon!
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-outline-primary" />
+                <a class="btn btn-outline-dark" asp-action="Index">Volver Atras</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<script>
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    var forms = document.getElementsByClassName('needs-validation');
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>

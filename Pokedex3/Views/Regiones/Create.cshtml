@@ -1,0 +1,31 @@
+﻿@model Pokedex3.Models.Region
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3>Crear Nueva Region</h3>
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <label>Region</label>
+            <div class="input-group mb-3">
+                <input asp-for="Nombre" type="text" class="form-control" aria-describedby="button-addon2">
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-success" type="submit" value="Guardar" id="button-addon2">Crear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-outline-dark" asp-action="Index">Volver</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

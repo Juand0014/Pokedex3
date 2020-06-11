@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Pokedex3.Models.Tipo>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Sala de Tipos de Pokemones</h3>
+
+<p>
+    <a class="btn btn-outline-success" asp-action="Create">Crear Region</a>
+</p>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="card" style="width: 17rem;">
+            <div class="card-header modal-title text-white" style="background:#99ccff;">
+                Tipo
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">@Html.DisplayFor(modelItem => item.Id) - @Html.DisplayFor(modelItem => item.Tipo1)</li>
+            </ul>
+            <div class="btn-group text-center" role="group" aria-label="Basic example">
+                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </div>
+        </div>
+    }
+</div>

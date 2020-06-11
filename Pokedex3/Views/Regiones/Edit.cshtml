@@ -1,0 +1,33 @@
+﻿@model Pokedex3.Models.Region
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Editar la Region: @Html.DisplayFor(values =>values.Nombre)</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <label>Region</label>
+            <div class="input-group mb-3">
+                <input asp-for="Nombre" type="text" class="form-control" aria-describedby="button-addon2">
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-success" type="submit" value="Guardar" id="button-addon2">Guardar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-outline-dark" asp-action="Index">Volver</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

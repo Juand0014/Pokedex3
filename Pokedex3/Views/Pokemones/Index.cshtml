@@ -1,0 +1,355 @@
+﻿@model IEnumerable<Pokedex3.Models.Pokemon>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Sala de pokemones</h1><hr />
+
+<p>
+    <a asp-action="Create" class="btn btn-outline-success">Create New</a>
+</p>
+<div class="container">
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            @if ((item.RegionNavigation.Nombre) == "Kanto")
+            {
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="card-header" style="background:#99ccff;">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                        </div>
+                        <div class="card">
+                            <div class="panel-body">
+
+                                <p class="card-text"><strong>Region: </strong>@Html.DisplayFor(modelItem => item.RegionNavigation.Nombre)</p>
+                                <p class="card-text"><strong>Tipo: </strong>@Html.DisplayFor(modelItem => item.TipoNavigation.Tipo1)</p>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <br />
+            }
+            else if ((item.RegionNavigation.Nombre) == "Johto")
+            {
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="card-header" style="background:#99ffff;">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                        </div>
+                        <div class="card">
+                            <div class="panel-body">
+
+                                <p class="card-text"><strong>Region: </strong>@Html.DisplayFor(modelItem => item.RegionNavigation.Nombre)</p>
+                                <p class="card-text"><strong>Tipo: </strong>@Html.DisplayFor(modelItem => item.TipoNavigation.Tipo1)</p>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <br />
+            }
+            else if ((item.RegionNavigation.Nombre) == "Hoenn")
+            {
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="card-header" style="background:#a3c2c2;">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                        </div>
+                        <div class="card">
+                            <div class="panel-body">
+
+                                <p class="card-text"><strong>Region: </strong>@Html.DisplayFor(modelItem => item.RegionNavigation.Nombre)</p>
+                                <p class="card-text"><strong>Tipo: </strong>@Html.DisplayFor(modelItem => item.TipoNavigation.Tipo1)</p>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <br />
+            }
+            else if ((item.RegionNavigation.Nombre) == "Sinnoh")
+            {
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="card-header" style="background:#8585e0;">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                        </div>
+                        <div class="card">
+                            <div class="panel-body">
+
+                                <p class="card-text"><strong>Region: </strong>@Html.DisplayFor(modelItem => item.RegionNavigation.Nombre)</p>
+                                <p class="card-text"><strong>Tipo: </strong>@Html.DisplayFor(modelItem => item.TipoNavigation.Tipo1)</p>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <br />
+            }
+            else if ((item.RegionNavigation.Nombre) == "Teselia")
+            {
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="card-header" style="background:#8cd9b3;">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                        </div>
+                        <div class="card">
+                            <div class="panel-body">
+
+                                <p class="card-text"><strong>Region: </strong>@Html.DisplayFor(modelItem => item.RegionNavigation.Nombre)</p>
+                                <p class="card-text"><strong>Tipo: </strong>@Html.DisplayFor(modelItem => item.TipoNavigation.Tipo1)</p>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <br />
+            }
+            else if ((item.RegionNavigation.Nombre) == "Kalos")
+            {
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="card-header" style="background:#99ffcc;">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                        </div>
+                        <div class="card">
+                            <div class="panel-body">
+
+                                <p class="card-text"><strong>Region: </strong>@Html.DisplayFor(modelItem => item.RegionNavigation.Nombre)</p>
+                                <p class="card-text"><strong>Tipo: </strong>@Html.DisplayFor(modelItem => item.TipoNavigation.Tipo1)</p>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <br />
+            }
+            else if ((item.RegionNavigation.Nombre) == "Alola")
+            {
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="card-header" style="background:#bf80ff;">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                        </div>
+                        <div class="card">
+                            <div class="panel-body">
+
+                                <p class="card-text"><strong>Region: </strong>@Html.DisplayFor(modelItem => item.RegionNavigation.Nombre)</p>
+                                <p class="card-text"><strong>Tipo: </strong>@Html.DisplayFor(modelItem => item.TipoNavigation.Tipo1)</p>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <br />
+            }
+            else if ((item.RegionNavigation.Nombre) == "Aura")
+            {
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="card-header" style="background:#99ff99;">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                        </div>
+                        <div class="card">
+                            <div class="panel-body">
+
+                                <p class="card-text"><strong>Region: </strong>@Html.DisplayFor(modelItem => item.RegionNavigation.Nombre)</p>
+                                <p class="card-text"><strong>Tipo: </strong>@Html.DisplayFor(modelItem => item.TipoNavigation.Tipo1)</p>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <br />
+            }
+            else if ((item.RegionNavigation.Nombre) == "Floresta")
+            {
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="card-header" style="background:#ff99ff;">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                        </div>
+                        <div class="card">
+                            <div class="panel-body">
+
+                                <p class="card-text"><strong>Region: </strong>@Html.DisplayFor(modelItem => item.RegionNavigation.Nombre)</p>
+                                <p class="card-text"><strong>Tipo: </strong>@Html.DisplayFor(modelItem => item.TipoNavigation.Tipo1)</p>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <br />
+            }
+            else if ((item.RegionNavigation.Nombre) == "Almia")
+            {
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="card-header" style="background:#ffffb3;">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                        </div>
+                        <div class="card">
+                            <div class="panel-body">
+
+                                <p class="card-text"><strong>Region: </strong>@Html.DisplayFor(modelItem => item.RegionNavigation.Nombre)</p>
+                                <p class="card-text"><strong>Tipo: </strong>@Html.DisplayFor(modelItem => item.TipoNavigation.Tipo1)</p>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <br />
+            }
+            else if ((item.RegionNavigation.Nombre) == "Oblivia")
+            {
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="card-header" style="background:#ff80ff;">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                        </div>
+                        <div class="card">
+                            <div class="panel-body">
+
+                                <p class="card-text"><strong>Region: </strong>@Html.DisplayFor(modelItem => item.RegionNavigation.Nombre)</p>
+                                <p class="card-text"><strong>Tipo: </strong>@Html.DisplayFor(modelItem => item.TipoNavigation.Tipo1)</p>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <br />
+            }
+            else if ((item.RegionNavigation.Nombre) == "Sol")
+            {
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="card-header" style="background:#e6ff99;">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                        </div>
+                        <div class="card">
+                            <div class="panel-body">
+
+                                <p class="card-text"><strong>Region: </strong>@Html.DisplayFor(modelItem => item.RegionNavigation.Nombre)</p>
+                                <p class="card-text"><strong>Tipo: </strong>@Html.DisplayFor(modelItem => item.TipoNavigation.Tipo1)</p>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <br />
+            }
+            else if ((item.RegionNavigation.Nombre) == "Ransei")
+            {
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="card-header" style="background:#ff9980;">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                        </div>
+                        <div class="card">
+                            <div class="panel-body">
+
+                                <p class="card-text"><strong>Region: </strong>@Html.DisplayFor(modelItem => item.RegionNavigation.Nombre)</p>
+                                <p class="card-text"><strong>Tipo: </strong>@Html.DisplayFor(modelItem => item.TipoNavigation.Tipo1)</p>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <br />
+            }
+            else if ((item.RegionNavigation.Nombre) == "Ferrum")
+            {
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="card-header" style="background:#d98c8c;">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                        </div>
+                        <div class="card">
+                            <div class="panel-body">
+
+                                <p class="card-text"><strong>Region: </strong>@Html.DisplayFor(modelItem => item.RegionNavigation.Nombre)</p>
+                                <p class="card-text"><strong>Tipo: </strong>@Html.DisplayFor(modelItem => item.TipoNavigation.Tipo1)</p>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <br />
+            }
+            else
+            {
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="card-header" style="background:#ffbf00;">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                        </div>
+                        <div class="card">
+                            <div class="panel-body">
+
+                                <p class="card-text"><strong>Region: </strong>@Html.DisplayFor(modelItem => item.RegionNavigation.Nombre)</p>
+                                <p class="card-text"><strong>Tipo: </strong>@Html.DisplayFor(modelItem => item.TipoNavigation.Tipo1)</p>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <br />
+            }
+
+        }
+
+    </div>
+</div>
+
+
+

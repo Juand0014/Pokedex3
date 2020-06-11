@@ -1,0 +1,430 @@
+﻿@model Pokedex3.Models.Region
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3>Detalles</h3>
+<hr />
+
+@if (Model.Nombre == "Kanto")
+{
+    <center>
+        <div class="Container" style="width:700px;">
+            <div class="Card">
+                <div class="modal-content text-left">
+                    <div class="modal-header" style="background:#99ccff;">
+                        <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles de Region</h5>
+                    </div>
+                    <div class="modal-body">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                    </div>
+                    <div class="modal-footer bg-transparent">
+                        <div class="text-right">
+                            <a class="btn text-white" style="background:#99ccff;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                            <a class=" btn btn-outline-dark" asp-action="Index">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+}
+else if (Model.Nombre == "Johto")
+{
+    <center>
+        <div class="Container" style="width:700px;">
+            <div class="Card">
+                <div class="modal-content text-left">
+                    <div class="modal-header" style="background:#99ffff;">
+                        <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles de Region</h5>
+                    </div>
+                    <div class="modal-body">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                    </div>
+                    <div class="modal-footer bg-transparent">
+                        <div class="text-right">
+                            <a class="btn text-white" style="background:#99ffff;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                            <a class=" btn btn-outline-dark" asp-action="Index">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+}
+else if (Model.Nombre == "Hoenn")
+{
+    <center>
+        <div class="Container" style="width:700px;">
+            <div class="Card">
+                <div class="modal-content text-left">
+                    <div class="modal-header" style="background:#a3c2c2;">
+                        <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles de Region</h5>
+                    </div>
+                    <div class="modal-body">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                    </div>
+                    <div class="modal-footer bg-transparent">
+                        <div class="text-right">
+                            <a class="btn text-white" style="background:#a3c2c2;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                            <a class=" btn btn-outline-dark" asp-action="Index">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+}
+else if (Model.Nombre == "Sinnoh")
+{
+    <center>
+        <div class="Container" style="width:700px;">
+            <div class="Card">
+                <div class="modal-content text-left">
+                    <div class="modal-header" style="background:#8585e0;">
+                        <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles de Region</h5>
+                    </div>
+                    <div class="modal-body">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                    </div>
+                    <div class="modal-footer bg-transparent">
+                        <div class="text-right">
+                            <a class="btn text-white" style="background:#8585e0;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                            <a class=" btn btn-outline-dark" asp-action="Index">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+}
+else if (Model.Nombre == "Teselia")
+{
+    <center>
+        <div class="Container" style="width:700px;">
+            <div class="Card">
+                <div class="modal-content text-left">
+                    <div class="modal-header" style="background:#8cd9b3;">
+                        <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles de Region</h5>
+                    </div>
+                    <div class="modal-body">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                    </div>
+                    <div class="modal-footer bg-transparent">
+                        <div class="text-right">
+                            <a class="btn text-white" style="background:#8cd9b3;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                            <a class=" btn btn-outline-dark" asp-action="Index">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+}
+else if (Model.Nombre == "Kalos")
+{
+    <center>
+        <div class="Container" style="width:700px;">
+            <div class="Card">
+                <div class="modal-content text-left">
+                    <div class="modal-header" style="background:#99ffcc;">
+                        <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles de Region</h5>
+                    </div>
+                    <div class="modal-body">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                    </div>
+                    <div class="modal-footer bg-transparent">
+                        <div class="text-right">
+                            <a class="btn text-white" style="background:#99ffcc;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                            <a class=" btn btn-outline-dark" asp-action="Index">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+}
+else if (Model.Nombre == "Alola")
+{
+    <center>
+        <div class="Container" style="width:700px;">
+            <div class="Card">
+                <div class="modal-content text-left">
+                    <div class="modal-header" style="background:#bf80ff;">
+                        <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles de Region</h5>
+                    </div>
+                    <div class="modal-body">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                    </div>
+                    <div class="modal-footer bg-transparent">
+                        <div class="text-right">
+                            <a class="btn text-white" style="background:#bf80ff;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                            <a class=" btn btn-outline-dark" asp-action="Index">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+}
+else if (Model.Nombre == "Aura")
+{
+    <center>
+        <div class="Container" style="width:700px;">
+            <div class="Card">
+                <div class="modal-content text-left">
+                    <div class="modal-header" style="background:#99ff99;">
+                        <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles de Region</h5>
+                    </div>
+                    <div class="modal-body">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                    </div>
+                    <div class="modal-footer bg-transparent">
+                        <div class="text-right">
+                            <a class="btn text-white" style="background:#99ff99;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                            <a class=" btn btn-outline-dark" asp-action="Index">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+}
+else if (Model.Nombre == "Floresta")
+{
+    <center>
+        <div class="Container" style="width:700px;">
+            <div class="Card">
+                <div class="modal-content text-left">
+                    <div class="modal-header" style="background:#ff99ff;">
+                        <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles de Region</h5>
+                    </div>
+                    <div class="modal-body">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                    </div>
+                    <div class="modal-footer bg-transparent">
+                        <div class="text-right">
+                            <a class="btn text-white" style="background:#ff99ff;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                            <a class=" btn btn-outline-dark" asp-action="Index">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+}
+else if (Model.Nombre == "Almia")
+{
+    <center>
+        <div class="Container" style="width:700px;">
+            <div class="Card">
+                <div class="modal-content text-left">
+                    <div class="modal-header" style="background:#ffffb3;">
+                        <h5 class="modal-title text-center text-dark" id="exampleModalLabel">Detalles de Region</h5>
+                    </div>
+                    <div class="modal-body">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                    </div>
+                    <div class="modal-footer bg-transparent">
+                        <div class="text-right">
+                            <a class="btn text-dark" style="background:#ffffb3;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                            <a class=" btn btn-outline-dark" asp-action="Index">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+}
+else if (Model.Nombre == "Oblivia")
+{
+    <center>
+        <div class="Container" style="width:700px;">
+            <div class="Card">
+                <div class="modal-content text-left">
+                    <div class="modal-header" style="background:#ff80ff;">
+                        <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles de Region</h5>
+                    </div>
+                    <div class="modal-body">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                    </div>
+                    <div class="modal-footer bg-transparent">
+                        <div class="text-right">
+                            <a class="btn text-white" style="background:#ff80ff;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                            <a class=" btn btn-outline-dark" asp-action="Index">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+}
+else if (Model.Nombre == "Sol")
+{
+    <center>
+        <div class="Container" style="width:700px;">
+            <div class="Card">
+                <div class="modal-content text-left">
+                    <div class="modal-header" style="background:#e6ff99;">
+                        <h5 class="modal-title text-center text-dark" id="exampleModalLabel">Detalles de Region</h5>
+                    </div>
+                    <div class="modal-body">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                    </div>
+                    <div class="modal-footer bg-transparent">
+                        <div class="text-right">
+                            <a class="btn text-dark" style="background:#e6ff99;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                            <a class=" btn btn-outline-dark" asp-action="Index">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+}
+else if (Model.Nombre == "Ransei")
+{
+    <center>
+        <div class="Container" style="width:700px;">
+            <div class="Card">
+                <div class="modal-content text-left">
+                    <div class="modal-header" style="background:#ff9980;">
+                        <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles de Region</h5>
+                    </div>
+                    <div class="modal-body">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                    </div>
+                    <div class="modal-footer bg-transparent">
+                        <div class="text-right">
+                            <a class="btn text-white" style="background:#ff9980;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                            <a class=" btn btn-outline-dark" asp-action="Index">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+}
+else if (Model.Nombre == "Ferrum")
+{
+    <center>
+        <div class="Container" style="width:700px;">
+            <div class="Card">
+                <div class="modal-content text-left">
+                    <div class="modal-header" style="background:#d98c8c;">
+                        <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles de Region</h5>
+                    </div>
+                    <div class="modal-body">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                    </div>
+                    <div class="modal-footer bg-transparent">
+                        <div class="text-right">
+                            <a class="btn text-white" style="background:#d98c8c;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                            <a class=" btn btn-outline-dark" asp-action="Index">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+}
+else
+{
+    <center>
+        <div class="Container" style="width:700px;">
+            <div class="Card">
+                <div class="modal-content text-left">
+                    <div class="modal-header" style="background:#ffbf00;">
+                        <h5 class="modal-title text-center text-white" id="exampleModalLabel">Detalles de Region</h5>
+                    </div>
+                    <div class="modal-body">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                    </div>
+                    <div class="modal-footer bg-transparent">
+                        <div class="text-right">
+                            <a class="btn text-white" style="background:#ffbf00;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                            <a class=" btn btn-outline-dark" asp-action="Index">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+}
+

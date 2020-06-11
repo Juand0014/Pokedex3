@@ -1,0 +1,32 @@
+﻿@model Pokedex3.Models.Tipo
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Crear Nuevo Tipo</h3>
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <label>Region</label>
+            <div class="input-group mb-3">
+                <input asp-for="Tipo1" type="text" class="form-control" aria-describedby="button-addon2">
+                <span asp-validation-for="Tipo1" class="text-danger"></span>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-success" type="submit" value="Guardar" id="button-addon2">Crear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-outline-dark" asp-action="Index">Volver</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
